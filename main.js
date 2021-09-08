@@ -1,22 +1,33 @@
-function Validator(options)
-{
+function Validator(options) {
 
     var formElement = document.querySelector(options.form);
 
     if(formElement) {
-        console.log(formElement);
+        
+        options.rules.forEach(function(rule) {
+            console.log(rule);
+        });
+
     }
 
 }
 
 // Định nghĩa rules
 
-Validator.isRequired = function()
-{
+Validator.isRequired = function(selector) {
+    return {
+        selector: selector,
+        test: function() {
 
+        }
+    };
 }
 
-Validator.isEmail = function()
-{
+Validator.isEmail = function(selector) {
+    return {
+        selector: selector,
+        test: function() {
 
+        }
+    };
 }
