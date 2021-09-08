@@ -1,5 +1,22 @@
-function test() {
-    console.log("hello")
-    test();
+function Validator(options)
+{
+
+    var formElement = document.querySelector(options.form);
+
+    if(formElement) {
+        console.log(formElement);
+    }
+
 }
-test();
+
+// Định nghĩa rules
+
+Validator.isRequired = function()
+{
+
+}
+
+Validator.isEmail = function()
+{
+
+}
